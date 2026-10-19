@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #184b72;
+  --color-brand-600: #133d5e;
+  --color-teal: #429988;
+  --color-teal-600: #36806f;
+  --color-mist: #e5e7eb;
+  --color-slate-brand: #64748b;
+  --color-ink: #0f172a;
+  --color-paper: #f6f8fa;
+
+  --font-display: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+/* the road stripe used as a section divider, echoing the logo */
+.road-rule {
+  height: 4px;
+  width: 56px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-teal) 0 60%, transparent 60% 70%, var(--color-teal) 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
